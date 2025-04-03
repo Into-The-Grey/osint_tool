@@ -1,11 +1,6 @@
 /.venv
 /.vscode
-logs/tor_controller.log
-logs/gobuster_tool.log
-logs/hydra_tool.log
-logs/medusa_tool.log
-logs/nikto_tool.log
-logs/nmap_tool.log
+logs/**
 **/__pycache__/**
 
 
