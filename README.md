@@ -1,5 +1,16 @@
 # OSINT Tool
 
+[![OSINT Tool Logo](https://img.shields.io/badge/OSINT%20Tool-Modular-blue?logo=opensourceinitiative)](https://github.com/your-repo-url)
+[![Nmap](https://img.shields.io/badge/Nmap-active%20scanning-brightgreen?logo=nmap)](https://nmap.org)
+[![Gobuster](https://img.shields.io/badge/Gobuster-directory--enumeration-orange?logo=github)](https://github.com/OJ/gobuster)
+[![Nikto](https://img.shields.io/badge/Nikto-web%20vulnerability-red?logo=nikto)](https://cirt.net/Nikto2)
+[![Hydra](https://img.shields.io/badge/Hydra-brute--force-purple?logo=github)](https://github.com/vanhauser-thc/thc-hydra)
+[![Medeusa](https://img.shields.io/badge/Medeusa-web--scanner-blueviolet?logo=github)](https://github.com/lanmaster53/medeusa)
+[![Flask](https://img.shields.io/badge/Flask-web%20UI-lightgrey?logo=flask)](https://flask.palletsprojects.com/)
+[![PyVis](https://img.shields.io/badge/PyVis-graph%20visualization-yellow?logo=pyvis)](https://pyvis.readthedocs.io/)
+
+---
+
 ## Overview
 
 The OSINT Tool is a modular and extensible open‑source intelligence gathering platform that combines both passive and active scanning capabilities. It is designed to automatically analyze provided inputs, dynamically discover additional targets, and correlate findings through a unified knowledge graph.
@@ -60,5 +71,5 @@ The OSINT Tool is a modular and extensible open‑source intelligence gathering 
 ## Additional Information
 
 For detailed usage instructions, please refer to the [usage.md](docs/usage.md) file.  
-For license information, please see the [LICENSE](docs/LICENSE) file.
+For license information, please see the [LICENSE](docs/LICENSE) file.  
 For contribution guidelines, please check the [CONTRIBUTING.md](docs/CONTRIBUTING.md) file.
