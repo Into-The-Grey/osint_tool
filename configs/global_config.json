@@ -1,0 +1,5 @@
+{
+  "http_timeout": 10,
+  "user_agent": "Mozilla/5.0 (OSINTTool)",
+  "username_permutation_enabled": true
+}

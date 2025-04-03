@@ -1,0 +1,6 @@
+{
+  "nmap_path": "/usr/bin/nmap",
+  "scan_options": "-sV -O", 
+  "required": true,
+  "default_targets": []
+}

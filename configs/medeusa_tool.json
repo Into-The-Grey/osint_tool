@@ -1,0 +1,5 @@
+{
+  "medeusa_path": "/usr/bin/medeusa",
+  "options": "--force", 
+  "required": false
+}

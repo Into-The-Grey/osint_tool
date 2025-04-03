@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>OSINT Tool - Results</title>
+</head>
+
+<body>
+    <h1>Scan Results</h1>
+    <p><a href="{{ url_for('graph') }}">View Interactive Graph</a></p>
+    <p><a href="{{ url_for('download') }}">Download JSON Report</a></p>
+    <h2>Summary of Findings</h2>
+    <h3>Nodes:</h3>
+    <ul>
+        {% for node in data.nodes %}
+        <li>{{ node.value }} ({{ node.type }}) - {{ node.details }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Edges:</h3>
+    <ul>
+        {% for edge in data.edges %}
+        <li>{{ edge.source }} --{{ edge.relation }}--> {{ edge.target }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ url_for('index') }}">Back to Home</a></p>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+{
+  "hydra_path": "/usr/bin/hydra",
+  "protocols": ["ssh", "ftp"],
+  "default_userlist": "/path/to/userlist.txt",
+  "default_passlist": "/path/to/passlist.txt",
+  "required": false
+}

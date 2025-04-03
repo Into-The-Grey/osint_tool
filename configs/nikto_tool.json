@@ -1,0 +1,5 @@
+{
+  "nikto_path": "/usr/bin/nikto",
+  "scan_options": "-Tuning 1234",
+  "required": true
+}

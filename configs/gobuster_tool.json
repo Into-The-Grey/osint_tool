@@ -1,0 +1,6 @@
+{
+  "gobuster_path": "/usr/bin/gobuster",
+  "wordlist": "/path/to/wordlist.txt",
+  "mode": "dir", 
+  "required": true
+}

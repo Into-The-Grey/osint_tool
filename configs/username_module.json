@@ -1,0 +1,5 @@
+{
+  "check_github": true,
+  "check_reddit": true,
+  "required": true
+}

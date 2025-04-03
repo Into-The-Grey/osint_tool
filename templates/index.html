@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>OSINT Tool - Scan</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style for the loading overlay */
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1050;
+            display: none;
+        }
+
+        #loading-overlay .spinner-border {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        pre {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">OSINT Tool</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('results') }}">Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('graph') }}">Graph</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('download') }}">Download</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('settings') }}">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('logs') }}">Logs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container mt-4">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <h1 class="mb-4">Start a New Scan</h1>
+        <p class="lead">
+            Enter your targets (one per line). Examples:
+        </p>
+        <pre>
+email:someone@example.com
+username:someuser
+domain:example.com
+ip:1.2.3.4
+phone:+1234567890
+address:123 Main St, City, Country
+realname:John Doe
+      </pre>
+        <form id="scanForm" action="{{ url_for('scan') }}" method="post">
+            <div class="mb-3">
+                <label for="targets" class="form-label">Targets</label>
+                <textarea id="targets" name="targets" class="form-control" rows="7"
+                    placeholder="email:someone@example.com&#10;username:someuser&#10;domain:example.com&#10;ip:1.2.3.4&#10;phone:+1234567890&#10;address:123 Main St, City, Country&#10;realname:John Doe"></textarea>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="darkweb" name="darkweb">
+                <label class="form-check-label" for="darkweb">Enable Dark Web Scanning</label>
+            </div>
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="permutations" name="permutations">
+                <label class="form-check-label" for="permutations">Enable Username Permutations</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Start Scan</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show the loading overlay when the form is submitted
+        document.getElementById("scanForm").addEventListener("submit", function () {
+            document.getElementById("loading-overlay").style.display = "block";
+        });
+    </script>
+</body>
+
+</html>

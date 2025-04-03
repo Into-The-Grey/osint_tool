@@ -1,0 +1,4 @@
+{
+  "api_url": "https://emailrep.io/{email}",
+  "required": true
+}
