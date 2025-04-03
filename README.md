@@ -1,6 +1,6 @@
 # OSINT Tool
 
-[![OSINT Tool Logo](https://img.shields.io/badge/OSINT%20Tool-Modular-blue?logo=opensourceinitiative)](https://github.com/your-repo-url)
+[![OSINT Tool Logo](https://img.shields.io/badge/OSINT%20Tool-Modular-blue?logo=opensourceinitiative)](https://github.com/Into-The-Grey/osint_tool)
 [![Nmap](https://img.shields.io/badge/Nmap-active%20scanning-brightgreen?logo=nmap)](https://nmap.org)
 [![Gobuster](https://img.shields.io/badge/Gobuster-directory--enumeration-orange?logo=github)](https://github.com/OJ/gobuster)
 [![Nikto](https://img.shields.io/badge/Nikto-web%20vulnerability-red?logo=nikto)](https://cirt.net/Nikto2)
