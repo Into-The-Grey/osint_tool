@@ -9,3 +9,5 @@ logs/nmap_tool.log
 **/__pycache__/**
 
 
+osint_results.db
+results.json
