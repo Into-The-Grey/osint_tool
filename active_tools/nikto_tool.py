@@ -39,8 +39,8 @@ class NiktoTool:
             logger.warning("NiktoTool is disabled (missing config).")
             return {"active_results": None}
 
-        nikto_path = self.config.get("nikto_path", "nikto")
-        options = self.config.get("scan_options", "")
+        nikto_path = self.config.get("nikto_path", "nikto") # type: ignore
+        options = self.config.get("scan_options", "") # type: ignore
 
         command = f"{nikto_path} {options} -h {target}"
         logger.info(f"Executing command: {command}")

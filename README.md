@@ -5,7 +5,7 @@
 [![Gobuster](https://img.shields.io/badge/Gobuster-directory--enumeration-orange?logo=github)](https://github.com/OJ/gobuster)
 [![Nikto](https://img.shields.io/badge/Nikto-web%20vulnerability-red?logo=nikto)](https://cirt.net/Nikto2)
 [![Hydra](https://img.shields.io/badge/Hydra-brute--force-purple?logo=github)](https://github.com/vanhauser-thc/thc-hydra)
-[![Medeusa](https://img.shields.io/badge/Medeusa-web--scanner-blueviolet?logo=github)](https://github.com/lanmaster53/medeusa)
+[![Medusa](https://img.shields.io/badge/Medusa-web--scanner-blueviolet?logo=github)](https://github.com/jmk-foofus/medusa)
 [![Flask](https://img.shields.io/badge/Flask-web%20UI-lightgrey?logo=flask)](https://flask.palletsprojects.com/)
 [![PyVis](https://img.shields.io/badge/PyVis-graph%20visualization-yellow?logo=pyvis)](https://pyvis.readthedocs.io/)
 
@@ -44,7 +44,7 @@ The OSINT Tool is a modular and extensible open‑source intelligence gathering 
   Scans web servers for known vulnerabilities.
 - **Hydra Tool:**  
   Executes brute-force attacks against network services (active use requires explicit authorization).
-- **Medeusa Tool:**  
+- **Medusa Tool:**  
   Tests web applications for potential vulnerabilities (active use requires explicit authorization).
 
 ### Dynamic Discovery and Correlation

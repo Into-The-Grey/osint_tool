@@ -40,8 +40,8 @@ class NmapTool:
             logger.warning("NmapTool is disabled (missing config).")
             return {"active_results": None}
 
-        nmap_path = self.config.get("nmap_path", "nmap")
-        options = self.config.get("scan_options", "-sV -O")
+        nmap_path = self.config.get("nmap_path", "nmap") # type: ignore
+        options = self.config.get("scan_options", "-sV -O") # type: ignore
 
         command = f"{nmap_path} {options} {target}"
         logger.info(f"Executing command: {command}")

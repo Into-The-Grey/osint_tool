@@ -39,10 +39,10 @@ class HydraTool:
             logger.warning("HydraTool is disabled (missing config).")
             return {"active_results": None}
 
-        hydra_path = self.config.get("hydra_path", "hydra")
-        protocols = self.config.get("protocols", [])
-        userlist = self.config.get("default_userlist", "")
-        passlist = self.config.get("default_passlist", "")
+        hydra_path = self.config.get("hydra_path", "hydra") # type: ignore
+        protocols = self.config.get("protocols", []) # type: ignore
+        userlist = self.config.get("default_userlist", "") # type: ignore
+        passlist = self.config.get("default_passlist", "") # type: ignore
 
         # This example assumes a simple scenario: use the first protocol in the list.
         if not protocols:

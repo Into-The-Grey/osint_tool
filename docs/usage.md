@@ -20,7 +20,7 @@ In addition to these passive modules, the tool includes several **active** (or "
 - **Gobuster Tool**: Conducts directory and file enumeration.
 - **Nikto Tool**: Scans web servers for vulnerabilities.
 - **Hydra Tool**: Executes brute-force attacks against network services.
-- **Medeusa Tool**: Tests web applications for vulnerabilities.
+- **Medusa Tool**: Tests web applications for vulnerabilities.
 
 Each module and active tool loads its configuration from the **configs/** folder and writes detailed logs to its own logfile in the **logs/** folder.
 
@@ -42,7 +42,7 @@ Each module and active tool loads its configuration from the **configs/** folder
 
 ## Introduction
 
-The OSINT Tool is a modular, extensible application for gathering open‑source intelligence. It supports scanning for email addresses, usernames, domains, IP addresses, phone numbers, street addresses, and real names using passive techniques. In addition, it provides active utilities (such as Nmap, Gobuster, Nikto, Hydra, and Medeusa) for more advanced testing scenarios. **Warning:** Active tools may perform intrusive scans. Ensure you have authorization before using them.
+The OSINT Tool is a modular, extensible application for gathering open‑source intelligence. It supports scanning for email addresses, usernames, domains, IP addresses, phone numbers, street addresses, and real names using passive techniques. In addition, it provides active utilities (such as Nmap, Gobuster, Nikto, Hydra, and Medusa) for more advanced testing scenarios. **Warning:** Active tools may perform intrusive scans. Ensure you have authorization before using them.
 
 ## Installation
 
@@ -117,7 +117,7 @@ If a module’s config file is missing, that module will be disabled.
 - **Gobuster Tool**: [Documentation](tools/gobuster_tool.md)
 - **Nikto Tool**: [Documentation](tools/nikto_tool.md)
 - **Hydra Tool**: [Documentation](tools/hydra_tool.md)
-- **Medeusa Tool**: [Documentation](tools/medeusa_tool.md)
+- **Medusa Tool**: [Documentation](tools/medusa_tool.md)
 
 ## Troubleshooting
 

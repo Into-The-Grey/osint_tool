@@ -39,9 +39,9 @@ class GobusterTool:
             logger.warning("GobusterTool is disabled (missing config).")
             return {"active_results": None}
 
-        gobuster_path = self.config.get("gobuster_path", "gobuster")
-        mode = self.config.get("mode", "dir")
-        wordlist = self.config.get("wordlist", "")
+        gobuster_path = self.config.get("gobuster_path", "gobuster") # type: ignore
+        mode = self.config.get("mode", "dir") # type: ignore
+        wordlist = self.config.get("wordlist", "") # type: ignore
 
         command = f"{gobuster_path} {mode} -u {target} -w {wordlist}"
         logger.info(f"Executing command: {command}")

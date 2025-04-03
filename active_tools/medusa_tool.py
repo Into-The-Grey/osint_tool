@@ -7,7 +7,7 @@ import time
 
 def load_config():
     config_path = os.path.join(
-        os.path.dirname(os.path.dirname(__file__)), "configs", "medeusa_tool.json"
+        os.path.dirname(os.path.dirname(__file__)), "configs", "medusa_tool.json"
     )
     if os.path.exists(config_path):
         with open(config_path, "r") as f:
@@ -15,10 +15,10 @@ def load_config():
     return None
 
 
-logger = logging.getLogger("MedeusaTool")
+logger = logging.getLogger("MedusaTool")
 logger.setLevel(logging.DEBUG)
 log_file = os.path.join(
-    os.path.dirname(os.path.dirname(__file__)), "logs", "medeusa_tool.log"
+    os.path.dirname(os.path.dirname(__file__)), "logs", "medusa_tool.log"
 )
 fh = logging.FileHandler(log_file)
 fh.setLevel(logging.DEBUG)
@@ -27,22 +27,22 @@ fh.setFormatter(formatter)
 logger.addHandler(fh)
 
 
-class MedeusaTool:
+class MedusaTool:
     def __init__(self):
         self.config = load_config()
         self.enabled = self.config is not None
-        self.name = "MedeusaTool"
+        self.name = "MedusaTool"
 
     def run(self, target):
         # Target is typically a domain for web application testing.
         if not self.enabled:
-            logger.warning("MedeusaTool is disabled (missing config).")
+            logger.warning("MedusaTool is disabled (missing config).")
             return {"active_results": None}
 
-        medeusa_path = self.config.get("medeusa_path", "medeusa")
-        options = self.config.get("options", "")
+        medusa_path = self.config.get("medusa_path", "medusa") # type: ignore
+        options = self.config.get("options", "") # type: ignore
 
-        command = f"{medeusa_path} {options} -u {target}"
+        command = f"{medusa_path} {options} -u {target}"
         logger.info(f"Executing command: {command}")
 
         try:
@@ -57,12 +57,12 @@ class MedeusaTool:
             end = time.time()
             logger.info(f"Command executed in {end - start:.2f} seconds.")
             if result.returncode == 0:
-                logger.info("Medeusa scan completed successfully.")
+                logger.info("Medusa scan completed successfully.")
             else:
                 logger.error(
-                    f"Medeusa scan failed with return code {result.returncode}: {result.stderr}"
+                    f"Medusa scan failed with return code {result.returncode}: {result.stderr}"
                 )
             return {"active_results": result.stdout}
         except Exception as e:
-            logger.exception(f"Error executing Medeusa scan: {e}")
+            logger.exception(f"Error executing Medusa scan: {e}")
             return {"active_results": None}
