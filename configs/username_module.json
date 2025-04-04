@@ -1,5 +1,822 @@
 {
-  "check_github": true,
-  "check_reddit": true,
-  "required": true
+  "required": true,
+  "username_permutation_enabled": true,
+  "sites": [
+  {
+    "name": "Facebook",
+    "url": "https://www.facebook.com/{username}",
+    "false_positive_signatures": [
+      "the link you followed may be broken",
+      "page may have been removed"
+    ]
+  },
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/{username}",
+    "false_positive_signatures": [
+      "Sorry, this page isn't available",
+      "The link you followed may be broken"
+    ]
+  },
+  {
+    "name": "Twitter",
+    "url": "https://twitter.com/{username}",
+    "false_positive_signatures": [
+      "This account doesn’t exist",
+      "Try searching for another"
+    ]
+  },
+  {
+    "name": "TikTok",
+    "url": "https://www.tiktok.com/@{username}",
+    "false_positive_signatures": [
+      "Couldn't find this account",
+      "couldn’t find this account"
+    ]
+  },
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com/{username}",
+    "false_positive_signatures": [
+      "This page isn't available",
+      "404"
+    ]
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/{username}",
+    "false_positive_signatures": [
+      "Profile Not Found",
+      "requested does not exist"
+    ]
+  },
+  {
+    "name": "Pinterest",
+    "url": "https://www.pinterest.com/{username}",
+    "false_positive_signatures": [
+      "Oops! We couldn't find that page",
+      "couldn't find that page"
+    ]
+  },
+  {
+    "name": "Reddit",
+    "url": "https://www.reddit.com/user/{username}",
+    "false_positive_signatures": [
+      "nobody on Reddit goes by that name",
+      "page not found"
+    ]
+  },
+  {
+    "name": "Tumblr",
+    "url": "https://{username}.tumblr.com/",
+    "false_positive_signatures": [
+      "There's nothing here",
+      "nothing here"
+    ]
+  },
+  {
+    "name": "Quora",
+    "url": "https://www.quora.com/profile/{username}",
+    "false_positive_signatures": [
+      "Profile Not Found",
+      "page not found"
+    ]
+  },
+  {
+    "name": "Snapchat",
+    "url": "https://www.snapchat.com/add/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "user not found"
+    ]
+  },
+  {
+    "name": "Medium",
+    "url": "https://medium.com/@{username}",
+    "false_positive_signatures": [
+      "404",
+      "page not found"
+    ]
+  },
+  {
+    "name": "MySpace",
+    "url": "https://www.myspace.com/{username}",
+    "false_positive_signatures": [
+      "Profile not found",
+      "profile could not be found"
+    ]
+  },
+  {
+    "name": "Gab",
+    "url": "https://gab.com/{username}",
+    "false_positive_signatures": [
+      "doesn’t exist",
+      "404"
+    ]
+  },
+  {
+    "name": "TruthSocial",
+    "url": "https://truthsocial.com/@{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "404"
+    ]
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com/{username}",
+    "false_positive_signatures": [
+      "Not Found",
+      "404"
+    ]
+  },
+  {
+    "name": "GitLab",
+    "url": "https://gitlab.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "doesn't exist"
+    ]
+  },
+  {
+    "name": "Bitbucket",
+    "url": "https://bitbucket.org/{username}",
+    "false_positive_signatures": [
+      "Repository not found",
+      "doesn't exist"
+    ]
+  },
+  {
+    "name": "CodePen",
+    "url": "https://codepen.io/{username}",
+    "false_positive_signatures": [
+      "404",
+      "We couldn’t find that"
+    ]
+  },
+  {
+    "name": "dev.to",
+    "url": "https://dev.to/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Oops"
+    ]
+  },
+  {
+    "name": "Kaggle",
+    "url": "https://www.kaggle.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not find"
+    ]
+  },
+  {
+    "name": "HackerRank",
+    "url": "https://www.hackerrank.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "User not found"
+    ]
+  },
+  {
+    "name": "Keybase",
+    "url": "https://keybase.io/{username}",
+    "false_positive_signatures": [
+      "not found",
+      "does not exist"
+    ]
+  },
+  {
+    "name": "SourceForge",
+    "url": "https://sourceforge.net/u/{username}",
+    "false_positive_signatures": [
+      "Invalid Project",
+      "Page Not Found"
+    ]
+  },
+  {
+    "name": "Codecademy",
+    "url": "https://www.codecademy.com/profiles/{username}",
+    "false_positive_signatures": [
+      "doesn't exist",
+      "Page not found"
+    ]
+  },
+  {
+    "name": "LeetCode",
+    "url": "https://leetcode.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Replit",
+    "url": "https://replit.com/@{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "FreeCodeCamp",
+    "url": "https://www.freecodecamp.org/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "Hackaday",
+    "url": "https://hackaday.io/{username}",
+    "false_positive_signatures": [
+      "Project not found",
+      "404"
+    ]
+  },
+  {
+    "name": "PyPI",
+    "url": "https://pypi.org/user/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "NPM",
+    "url": "https://www.npmjs.com/~{username}",
+    "false_positive_signatures": [
+      "404",
+      "User not found"
+    ]
+  },
+  {
+    "name": "CodeChef",
+    "url": "https://www.codechef.com/users/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "HackerOne",
+    "url": "https://hackerone.com/{username}",
+    "false_positive_signatures": [
+      "Not Found",
+      "404"
+    ]
+  },
+  {
+    "name": "TryHackMe",
+    "url": "https://tryhackme.com/p/{username}",
+    "false_positive_signatures": [
+      "user was not found",
+      "not found"
+    ]
+  },
+  {
+    "name": "Codeforces",
+    "url": "https://codeforces.com/profile/{username}",
+    "false_positive_signatures": [
+      "does not exist",
+      "not found"
+    ]
+  },
+  {
+    "name": "Codewars",
+    "url": "https://www.codewars.com/users/{username}",
+    "false_positive_signatures": [
+      "Not found",
+      "404"
+    ]
+  },
+  {
+    "name": "Steemit",
+    "url": "https://steemit.com/@{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "OpenSea",
+    "url": "https://opensea.io/{username}",
+    "false_positive_signatures": [
+      "Page not found",
+      "not found"
+    ]
+  },
+  {
+    "name": "Foundation",
+    "url": "https://foundation.app/@{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Rarible",
+    "url": "https://rarible.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Steam",
+    "url": "https://steamcommunity.com/id/{username}",
+    "false_positive_signatures": [
+      "specified profile could not be found",
+      "encountered while processing your request"
+    ]
+  },
+  {
+    "name": "Twitch",
+    "url": "https://www.twitch.tv/{username}",
+    "false_positive_signatures": [
+      "content is unavailable",
+      "Error #2000"
+    ]
+  },
+  {
+    "name": "GOG",
+    "url": "https://www.gog.com/u/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "404"
+    ]
+  },
+  {
+    "name": "NintendoLife",
+    "url": "https://www.nintendolife.com/users/{username}",
+    "false_positive_signatures": [
+      "not found",
+      "404"
+    ]
+  },
+  {
+    "name": "Chess.com",
+    "url": "https://www.chess.com/member/{username}",
+    "false_positive_signatures": [
+      "does not exist on Chess.com",
+      "User not found"
+    ]
+  },
+  {
+    "name": "Lichess",
+    "url": "https://lichess.org/@/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Speedrun.com",
+    "url": "https://www.speedrun.com/user/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Game Jolt",
+    "url": "https://gamejolt.com/@{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "DeviantArt",
+    "url": "https://{username}.deviantart.com",
+    "false_positive_signatures": [
+      "Page Not Found",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "Flickr",
+    "url": "https://www.flickr.com/people/{username}",
+    "false_positive_signatures": [
+      "People not found",
+      "Not found"
+    ]
+  },
+  {
+    "name": "500px",
+    "url": "https://500px.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Dribbble",
+    "url": "https://dribbble.com/{username}",
+    "false_positive_signatures": [
+      "not found",
+      "404"
+    ]
+  },
+  {
+    "name": "Behance",
+    "url": "https://www.behance.net/{username}",
+    "false_positive_signatures": [
+      "Oops!",
+      "404"
+    ]
+  },
+  {
+    "name": "SoundCloud",
+    "url": "https://soundcloud.com/{username}",
+    "false_positive_signatures": [
+      "We can’t find that user",
+      "you found a glitch"
+    ]
+  },
+  {
+    "name": "Mixcloud",
+    "url": "https://www.mixcloud.com/{username}",
+    "false_positive_signatures": [
+      "Page Not Found",
+      "page cannot be found"
+    ]
+  },
+  {
+    "name": "Bandcamp",
+    "url": "https://bandcamp.com/{username}",
+    "false_positive_signatures": [
+      "Not found",
+      "404"
+    ]
+  },
+  {
+    "name": "Last.fm",
+    "url": "https://www.last.fm/user/{username}",
+    "false_positive_signatures": [
+      "404",
+      "does not exist"
+    ]
+  },
+  {
+    "name": "ReverbNation",
+    "url": "https://www.reverbnation.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "Letterboxd",
+    "url": "https://letterboxd.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Wattpad",
+    "url": "https://www.wattpad.com/user/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "error code 215"
+    ]
+  },
+  {
+    "name": "Patreon",
+    "url": "https://www.patreon.com/{username}",
+    "false_positive_signatures": [
+      "page may have been removed",
+      "404"
+    ]
+  },
+  {
+    "name": "Slideshare",
+    "url": "https://www.slideshare.net/{username}",
+    "false_positive_signatures": [
+      "We couldn't find",
+      "was not found"
+    ]
+  },
+  {
+    "name": "SpeakerDeck",
+    "url": "https://speakerdeck.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "ArtStation",
+    "url": "https://www.artstation.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Spotify",
+    "url": "https://open.spotify.com/user/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "BoardGameGeek",
+    "url": "https://boardgamegeek.com/user/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "not found"
+    ]
+  },
+  {
+    "name": "MyAnimeList",
+    "url": "https://myanimelist.net/profile/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "MyDramaList",
+    "url": "https://mydramalist.com/profile/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "TripAdvisor",
+    "url": "https://www.tripadvisor.com/members/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "not found"
+    ]
+  },
+  {
+    "name": "AllMyLinks",
+    "url": "https://allmylinks.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "about.me",
+    "url": "https://about.me/{username}",
+    "false_positive_signatures": [
+      "Whoops",
+      "not found"
+    ]
+  },
+  {
+    "name": "9GAG",
+    "url": "https://9gag.com/u/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Instructables",
+    "url": "https://www.instructables.com/member/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "OpenStreetMap",
+    "url": "https://www.openstreetmap.org/user/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "not found"
+    ]
+  },
+  {
+    "name": "Couchsurfing",
+    "url": "https://www.couchsurfing.com/people/{username}",
+    "false_positive_signatures": [
+      "Profile Not Found",
+      "not found"
+    ]
+  },
+  {
+    "name": "DevRant",
+    "url": "https://devrant.com/users/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Fur Affinity",
+    "url": "https://www.furaffinity.net/user/{username}",
+    "false_positive_signatures": [
+      "cannot be found",
+      "not found"
+    ]
+  },
+  {
+    "name": "LiveJournal",
+    "url": "https://{username}.livejournal.com",
+    "false_positive_signatures": [
+      "Error",
+      "does not exist"
+    ]
+  },
+  {
+    "name": "Allrecipes",
+    "url": "https://www.allrecipes.com/cook/{username}",
+    "false_positive_signatures": [
+      "Page Not Found",
+      "cannot be found"
+    ]
+  },
+  {
+    "name": "Untappd",
+    "url": "https://untappd.com/user/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "404"
+    ]
+  },
+  {
+    "name": "eBay",
+    "url": "https://www.ebay.com/usr/{username}",
+    "false_positive_signatures": [
+      "No longer a registered user",
+      "User ID not found"
+    ]
+  },
+  {
+    "name": "Etsy",
+    "url": "https://www.etsy.com/shop/{username}",
+    "false_positive_signatures": [
+      "doesn’t exist",
+      "not found"
+    ]
+  },
+  {
+    "name": "Fiverr",
+    "url": "https://www.fiverr.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "Freelancer",
+    "url": "https://www.freelancer.com/u/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "not found"
+    ]
+  },
+  {
+    "name": "Pornhub",
+    "url": "https://www.pornhub.com/users/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "page not found"
+    ]
+  },
+  {
+    "name": "XVideos",
+    "url": "https://www.xvideos.com/profiles/{username}",
+    "false_positive_signatures": [
+      "Profile Not Found",
+      "cannot be found"
+    ]
+  },
+  {
+    "name": "XHamster",
+    "url": "https://xhamster.com/users/{username}",
+    "false_positive_signatures": [
+      "cannot be found",
+      "not found"
+    ]
+  },
+  {
+    "name": "RedTube",
+    "url": "https://www.redtube.com/users/{username}",
+    "false_positive_signatures": [
+      "Page Not Found",
+      "page not found"
+    ]
+  },
+  {
+    "name": "OnlyFans",
+    "url": "https://onlyfans.com/{username}",
+    "false_positive_signatures": [
+      "User not found",
+      "not found"
+    ]
+  },
+  {
+    "name": "Fansly",
+    "url": "https://fansly.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Chaturbate",
+    "url": "https://chaturbate.com/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Motherless",
+    "url": "https://motherless.com/m/{username}",
+    "false_positive_signatures": [
+      "user does not exist",
+      "not found"
+    ]
+  },
+  {
+    "name": "Blogger",
+    "url": "https://{username}.blogspot.com",
+    "false_positive_signatures": [
+      "Blog not found",
+      "404"
+    ]
+  },
+  {
+    "name": "WordPress.com",
+    "url": "https://{username}.wordpress.com",
+    "false_positive_signatures": [
+      "doesn’t exist",
+      "cannot be found"
+    ]
+  },
+  {
+    "name": "WordPress.org",
+    "url": "https://profiles.wordpress.org/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Weebly",
+    "url": "https://{username}.weebly.com",
+    "false_positive_signatures": [
+      "404",
+      "Weebly - Create a free website"
+    ]
+  },
+  {
+    "name": "Wellfound",
+    "url": "https://wellfound.com/u/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "ProductHunt",
+    "url": "https://www.producthunt.com/@{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Ask.fm",
+    "url": "https://ask.fm/{username}",
+    "false_positive_signatures": [
+      "Page Not Found",
+      "page not found"
+    ]
+  },
+  {
+    "name": "AniList",
+    "url": "https://anilist.co/user/{username}",
+    "false_positive_signatures": [
+      "404",
+      "Not Found"
+    ]
+  },
+  {
+    "name": "TradingView",
+    "url": "https://www.tradingview.com/u/{username}",
+    "false_positive_signatures": [
+      "404",
+      "not found"
+    ]
+  },
+  {
+    "name": "Gravatar",
+    "url": "https://en.gravatar.com/{username}",
+    "false_positive_signatures": [
+      "Profile not found",
+      "not found"
+    ]
+  }
+]
 }
